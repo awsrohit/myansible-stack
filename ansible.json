@@ -2,9 +2,6 @@
   "AWSTemplateFormatVersion" : "2010-09-09",
 
   "Description" : "CloudFormation Template for creating a stack to learn Ansible.
-  01 - SecurityGroup,
-  02 - LaunchConfig,
-  03 - Control Node ASG",
 
   "Parameters" : {
     "VpcId" : {
@@ -27,7 +24,7 @@
     "KeyName" : {
       "Description" : "The EC2 Key Pair to allow SSH access to the instances",
       "Type" : "AWS::EC2::KeyPair::KeyName",
-      "Default": "ec2-admin",
+      "Default": "ec2-rohit02",
       "ConstraintDescription" : "must be the name of an existing EC2 KeyPair."
     },
 
