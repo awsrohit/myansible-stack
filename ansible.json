@@ -124,7 +124,7 @@
   },
 
   "Resources" : {
-    "AnsibleSecurityGroup" : {
+    "InstanceSecurityGroup" : {
       "Type" : "AWS::EC2::SecurityGroup",
       "Properties" : {
         "GroupDescription" : "Enable SSH and HTTP Access",
@@ -162,7 +162,7 @@
         "KeyName" : { "Ref" : "KeyName" },
         "ImageId" : { "Fn::FindInMap" : [ "AWSRegionArch2AMI", { "Ref" : "AWS::Region" },
                                           { "Fn::FindInMap" : [ "AWSInstanceType2Arch", { "Ref" : "InstanceType" }, "Arch" ] } ] },
-        "SecurityGroups" : [ { "Ref" : "AnsiblSecurityGroup" } ],
+        "SecurityGroups" : [ { "Ref" : "InstanceSecurityGroup" } ],
         "InstanceType" : { "Ref" : "InstanceType" },
         "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
             "#!/bin/bash -xe\n",
@@ -196,7 +196,7 @@
   "Outputs" : {
       "InstanceSecurityGroup": {
         "Description" : "InstanceSecurityGroup",
-        "Value" : { "Ref" : "AnsibleSecurityGroup" }
+        "Value" : { "Ref" : "InstanceSecurityGroup" }
       },
       "AnsibleControlNodeLaunchConfig": {
         "Description" : "Launch Config of Ansible Control Node",
