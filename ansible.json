@@ -2,6 +2,9 @@
   "AWSTemplateFormatVersion" : "2010-09-09",
 
   "Description" : "CloudFormation Template for creating a stack to learn Ansible.
+  01 - SecurityGroup,
+  02 - LaunchConfig,
+  03 - Control Node ASG",
 
   "Parameters" : {
     "VpcId" : {
