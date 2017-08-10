@@ -11,7 +11,7 @@
       "Type" : "AWS::EC2::VPC::Id",
       "Description" : "VpcId of your existing Virtual Private Cloud (VPC)",
       "ConstraintDescription" : "must be the VPC Id of an existing Virtual Private Cloud.",
-      "Default": "vpc-8fbd60e9"
+      "Default": "vpc-ed66b58a"
     },
 
     "SSHLocation" : {
